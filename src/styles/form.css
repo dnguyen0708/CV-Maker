@@ -1,0 +1,75 @@
+.form-wrapper{
+    box-shadow: 0px 5px 20px 1px;
+    padding:12px;
+    width: 30vw;
+}
+.form-group{
+    display: flex;
+    gap:75px;
+    margin-bottom: 32px;
+}
+.form-control{
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+}
+.form-control input{
+    min-width: none;
+}
+input,
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+textarea{
+    border: 2px solid var(--default-border-color);
+    border-radius: .3rem;
+    font-size: large;
+    padding: 6px;
+    /* width: 100%; */
+}
+input[type="link"]:focus:invalid,
+input[type="tel"]:focus:invalid,
+input[type="email"]:focus:invalid{
+    outline: none;
+    border-color: red !important;
+}
+label{
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+.special{
+    width: 100%;
+}
+.form-control textarea{
+    resize: none;
+    max-width: 200%;
+}
+.add-skill{
+    display: none;
+}
+.add-skill.active{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    margin-top: 12px;
+    background-color: rgb(79, 202, 161);
+}
+.form-wrapper #skill{
+    display: none;
+    margin-top: 12px;
+    /* width: 200%; */
+}
+.form-wrapper #skill.active{
+    display: block;
+}
+.submit-skill{
+    display: none;
+    margin-top: 2px;
+    background-color: green;
+}
+.submit-skill.active{
+    display: block;
+}

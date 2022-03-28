@@ -1,0 +1,14 @@
+*,*::before,*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  --header-height:150px;
+  --footer-height: 70px;
+  --default-border-color: grey;
+
+}
+body{
+  min-height: 100vh;
+}
