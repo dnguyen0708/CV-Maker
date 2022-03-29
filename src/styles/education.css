@@ -1,0 +1,15 @@
+.education-container{
+    margin:12px 0;
+    padding-left: 50px;
+}
+.education-container .school-name{
+    font-size: 18px;
+}
+.education-icon{
+    display: none;
+    position: relative;
+    left:92%;
+}
+.education-container:hover .education-icon{
+    display: block;
+}

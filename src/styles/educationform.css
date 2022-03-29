@@ -1,0 +1,29 @@
+.submit-education{
+    position: relative;
+    width: 49%;
+    
+}
+.submit-education.add{
+    margin-right: 12px;
+    background-color: green;
+}
+.add-education{
+    display: none;
+}
+.add-education.active{
+    display: block;
+}
+.education-group{
+    display: none;
+}
+.education-group.active{
+    display: block;
+    margin-top: 12px;
+}
+.education-btn{
+    margin-top: 6px;
+}
+.education-group .form-control{
+    width: 100%;
+    padding: 6px 0;
+}

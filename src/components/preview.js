@@ -1,17 +1,22 @@
 import "../styles/preview.css";
+import { FaWindowClose } from 'react-icons/fa';
 import profile_img from '../asset/img/blank-profile-pic.png';
 import { FaPhone } from 'react-icons/fa';
 import { FaEnvelope } from 'react-icons/fa';
 import { FaLinkedinIn } from 'react-icons/fa';
 import { FaGlobeAmericas } from 'react-icons/fa';
-import { FaTrash } from 'react-icons/fa';
+import Experience from './experience';
+import Education from "./education";
 const Preview = (props) => {
 
-    const { phone, email, link, address, about, skill, removeSkill } = props;
+    const { phone, email, link, address, about,
+        skill, removeSkill,
+        work, removeWork,
+        education, removeEducation } = props;
     return (
         <div className="preview-wrapper">
-            <div className="side-content">
-                <img src={profile_img} alt="profile-img" className="profile-img" />
+            <img src={profile_img} alt="profile-img" className="profile-img" />
+            <div className="preview-side-content">
                 <h1>CONTACT</h1>
                 <div className="contact">
                     <div className="info-container">
@@ -40,16 +45,23 @@ const Preview = (props) => {
                             return (
                                 <div className="skill-container">
                                     <li key={index} className="skill">{s}</li>
-                                    <button className="icon-btn" onClick={() => removeSkill(index)}><FaTrash /></button>
+                                    <button className="icon-btn" onClick={() => removeSkill(index)}><FaWindowClose /></button>
                                 </div>
                             )
                         })}
                     </ul>
                 </div>
-
             </div>
-            <div className="main-content">
 
+            <div className="preview-main-content-header">
+                <h1 className="author-name">DAN NGUYEN</h1>
+                <h2 className="job-title">SOFTWARE ENGINEER</h2>
+            </div>
+            <div className="preview-main-content-body">
+                <h1>WORK EXPERIENCE</h1>
+                <Experience work={work} removeWork={removeWork} />
+                <h1>EDUCATION</h1>
+                <Education education={education} removeEducation={removeEducation} />
             </div>
         </div>
     )

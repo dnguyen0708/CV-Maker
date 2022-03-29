@@ -1,0 +1,31 @@
+.form-wrapper .submit-work{
+    position: relative;
+    width: 49%;
+    
+}
+.submit-work.add{
+    margin-right: 12px;
+    background-color: green;
+}
+.add-work{
+    display: none;
+}
+.work-group{
+    display: none;
+}
+.work-group.active{
+    display: block;
+    margin-top: 12px;
+}
+.work-btn{
+    margin-top: 6px;
+}
+
+.work-icon{
+    display: none;
+    position: relative;
+    left:92%;
+}
+.experience-container:hover .work-icon{
+    display: block;
+}

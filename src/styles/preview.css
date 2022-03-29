@@ -1,39 +1,33 @@
 .preview-wrapper{
     box-shadow: 0px 5px 20px 1px;
-    /* padding:12px; */
-    display: flex;
-    width: 600px;
+    display: grid;
+    grid-template-columns: 250px 550px;
+    grid-template-rows: 250px 1fr;
 }
-.side-content{
-    width: 250px;
-    /* flex:1.2; */
-    background-color: #ffc0cb;
+.preview-side-content{
+    background-color: var(--info-palate-color);
     display: flex;
     flex-direction: column;
-    /* align-items: flex-start; */
+    grid-area: 2/1/3/2;
     padding: 6px 0;
     gap:12px;
     color: red;
     padding-left: 25px;
     word-wrap:break-word;
+
 }
-.main-content{
-    /* flex:2; */
-    flex:1;
-}
-.side-content p{
+.preview-side-content p{
     color:black;
 }
 .profile-img{
     display: inline-block;
-    width:150px;
-    height: 150px;
+    width:170px;
+    height: 170px;
     border-radius: 50%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    margin-top: 25px;
-    margin-left: 22px;
+    margin: auto;
 }
 .contact,.skills{
     margin-right: 7px;
@@ -51,7 +45,7 @@
 .info-container p{
     width: 90%;
 }
-.side-content h1{
+.preview-side-content h1{
     /* background-color: white; */
     width: 100%;
     /* text-align: center; */
@@ -61,7 +55,7 @@
 .skills{
     margin-left: 12px;
 }
-.side-content li{
+.preview-side-content li{
     margin-top: 5px;
 }
 .skill-container{
@@ -78,8 +72,20 @@
 }
 .skill-list li:hover + .icon-btn{
     display: block;
-    color:rosybrown;
 }
 .about-me{
     max-width:95% ;
+}
+.preview-main-content-header{
+    text-align: center;
+    color:grey;
+    grid-area: 1/2/2/3;
+    margin: auto;
+}
+.preview-main-content-body{
+    grid-area: 2/2/3/3;
+    padding: 0 20px;
+}
+.preview-main-content-body h1{
+    color: var(--info-palate-color);
 }

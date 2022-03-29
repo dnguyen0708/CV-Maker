@@ -49,7 +49,7 @@ label{
 .add-skill{
     display: none;
 }
-.add-skill.active{
+.add-skill.active,.add-work.active,.add-education.active{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,7 +60,6 @@ label{
 .form-wrapper #skill{
     display: none;
     margin-top: 12px;
-    /* width: 200%; */
 }
 .form-wrapper #skill.active{
     display: block;
