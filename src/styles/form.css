@@ -72,3 +72,6 @@ label{
 .submit-skill.active{
     display: block;
 }
+.form-wrapper a{
+    color:white;
+}

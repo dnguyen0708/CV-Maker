@@ -20,6 +20,9 @@
     color:black;
 }
 .profile-img{
+    margin: auto;
+}
+.cover-img{
     display: inline-block;
     width:170px;
     height: 170px;
@@ -28,6 +31,7 @@
     background-position: center;
     background-size: cover;
     margin: auto;
+    border: none;
 }
 .contact,.skills{
     margin-right: 7px;
@@ -88,4 +92,14 @@
 }
 .preview-main-content-body h1{
     color: var(--info-palate-color);
+}
+.preview-wrapper #img{
+    display: none;
+}
+.preview-main-content-header .author-name{
+    font-size: 50px;
+    color: red;
+}
+.preview-main-content-header .job-title{
+    font-size: 25px;
 }

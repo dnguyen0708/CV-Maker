@@ -7,6 +7,8 @@ import EducationForm from './educationForm';
 
 const Form = () => {
 
+    const [name, setName] = useState('JOHN DOE');
+    const [title, setTitle] = useState('SOFTWARE ENGINEER');
     const [email, setEmail] = useState('johndoe@gmail.com');
     const [phone, setPhone] = useState('(202) 456-1111');
     const [link, setLink] = useState('https://www.linkedin.com');
@@ -35,6 +37,14 @@ const Form = () => {
     const aboutHandler = () => {
         const about = document.querySelector('#about');
         setAbout(about.value);
+    }
+    const nameHandler = () => {
+        const name = document.querySelector('#full-name');
+        setName(name.value.toUpperCase());
+    }
+    const titleHandler = () => {
+        const title = document.querySelector('#title');
+        setTitle(title.value.toUpperCase());
     }
     const toggleSkill = () => {
         const addBtn = document.querySelector('.add-skill');
@@ -66,6 +76,22 @@ const Form = () => {
     return (
         <>
             <div className="form-wrapper">
+                <div className="form-group">
+                    <div className="form-control">
+                        <label htmlFor="full-name">NAME</label>
+                        <input type="text" className="full-name" id="full-name"
+                            placeholder={name.toUpperCase()}
+                            onChange={nameHandler}
+                            required />
+                    </div>
+                    <div className="form-control">
+                        <label htmlFor="phone">TITLE</label>
+                        <input type="text" className="title" id="title"
+                            placeholder={title.toUpperCase()}
+                            onChange={titleHandler}
+                            minLength={10} required />
+                    </div>
+                </div>
                 <div className="form-group">
                     <div className="form-control">
                         <label htmlFor="email">EMAIL</label>
@@ -112,6 +138,7 @@ const Form = () => {
                 </div>
                 <Workform work={work} setWork={setWork} />
                 <EducationForm education={education} setEducation={setEducation} />
+
             </div>
             <Preview
                 email={email}
@@ -120,6 +147,8 @@ const Form = () => {
                 address={address}
                 about={about}
                 skill={skill}
+                name={name}
+                title={title}
                 removeSkill={removeSkill}
                 work={work}
                 removeWork={removeWork}

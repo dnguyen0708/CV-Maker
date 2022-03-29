@@ -6,6 +6,11 @@
     margin-top: 12px;
 }
 .company-name{
-    font-weight: 550;
-    font-size: large;
+    font-weight: 1rem;
+    font-size: 22px;
+}
+.experience-container .title{
+    font-size: 30px;
+    font-weight: 600;
+    color:rgb(70, 60, 60);
 }

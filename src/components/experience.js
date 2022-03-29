@@ -11,7 +11,7 @@ const Experience = ({ work, removeWork }) => {
                         <button className="work-icon" onClick={() => removeWork(index)}><FaWindowClose /></button>
                         <h2 className="title">{w.job}</h2>
                         <p className="company-name">{w.company}</p>
-                        <p className="address">{w.address}</p>
+                        <p className="address">Address: {w.address}</p>
                         <p className="from-to">{w.fromTo}</p>
                         <p className="job-description">{w.desc}</p>
                     </div>
