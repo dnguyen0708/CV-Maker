@@ -61,6 +61,7 @@
 }
 .preview-side-content li{
     margin-top: 5px;
+    color: black;
 }
 .skill-container{
     display: flex;
