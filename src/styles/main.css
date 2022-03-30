@@ -1,6 +1,17 @@
-.main-content{
+.main-content {
     display: flex;
     justify-content: center;
-    gap:50px;
+    gap: 50px;
     padding: 25px 0;
+}
+
+@media screen and (max-width: 850px) {
+    .main-content {
+        flex-direction: column;
+        /* height: calc(var(--header-height) + var(--footer-height) + 180vh); */
+        height: auto;
+        align-items: center;
+    }
+
+
 }
