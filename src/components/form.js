@@ -7,13 +7,15 @@ import EducationForm from './educationForm';
 import ContactForm from './contactForm';
 const Form = () => {
 
-    const [name, setName] = useState('JOHN DOE');
-    const [title, setTitle] = useState('SOFTWARE ENGINEER');
-    const [email, setEmail] = useState('johndoe@gmail.com');
-    const [phone, setPhone] = useState('(202) 456-1111');
-    const [link, setLink] = useState('https://www.linkedin.com');
-    const [address, setAddress] = useState('1600 Pennsylvania Avenue NW, Washington, DC 20500');
-    const [about, setAbout] = useState('say a little about yourself.');
+    const [contact, setContact] = useState({
+        name: 'JOHN DOE',
+        title: 'SOFTWARE ENGINEER',
+        email: 'johndoe@gmail.com',
+        phone: '(202) 456-1111',
+        link: 'https://www.linkedin.com',
+        address: '1600 Pennsylvania Avenue NW, Washington, DC 20500',
+        about: 'say a little about yourself.'
+    });
     const [skill, setSkill] = useState([]);
     const [work, setWork] = useState([]);
     const [education, setEducation] = useState([]);
@@ -49,15 +51,7 @@ const Form = () => {
     return (
         <>
             <div className="form-wrapper">
-                <ContactForm
-                    email={email} setEmail={setEmail}
-                    phone={phone} setPhone={setPhone}
-                    link={link} setLink={setLink}
-                    address={address} setAddress={setAddress}
-                    about={about} setAbout={setAbout}
-                    skill={skill} setSkill={setSkill}
-                    name={name} setName={setName}
-                    title={title} setTitle={setTitle} />
+                <ContactForm contact={contact} setContact={setContact} />
                 <div className="form-control special">
                     <button className='add-skill btn active' onClick={toggleSkill}><FaPlus /> SKILL</button>
                     <input type="text" name="skill" id="skill" autoComplete="off" maxLength={22} />
@@ -68,14 +62,8 @@ const Form = () => {
 
             </div>
             <Preview
-                email={email}
-                phone={phone}
-                link={link}
-                address={address}
-                about={about}
+                contact={contact}
                 skill={skill}
-                name={name}
-                title={title}
                 removeSkill={removeSkill}
                 work={work}
                 removeWork={removeWork}

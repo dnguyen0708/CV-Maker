@@ -1,41 +1,34 @@
 
+const ContactForm = ({ contact, setContact }) => {
 
-const ContactForm = ({
-    email, setEmail,
-    phone, setPhone,
-    link, setLink,
-    address, setAddress,
-    name, setName,
-    about, setAbout,
-    title, setTitle
-}) => {
     const emailHandler = () => {
         const email = document.querySelector('#email');
-        setEmail(email.value);
+        setContact({ ...contact, email: email.value });
     }
     const phoneHandler = () => {
         const phone = document.querySelector('#phone');
-        setPhone(phone.value);
+        setContact({ ...contact, phone: phone.value });
     }
     const linkHandler = () => {
         const link = document.querySelector('#link');
-        setLink(link.value);
+        setContact({ ...contact, link: link.value });
     }
     const addressHandler = () => {
         const address = document.querySelector('#address');
-        setAddress(address.value);
+        setContact({ ...contact, address: address.value });
     }
     const aboutHandler = () => {
         const about = document.querySelector('#about');
-        setAbout(about.value);
+        setContact({ ...contact, about: about.value });
     }
     const nameHandler = () => {
         const name = document.querySelector('#full-name');
-        setName(name.value.toUpperCase());
+        // setName(name.value.toUpperCase());
+        setContact({ ...contact, name: name.value.toUpperCase() });
     }
     const titleHandler = () => {
         const title = document.querySelector('#title');
-        setTitle(title.value.toUpperCase());
+        setContact({ ...contact, title: title.value.toUpperCase() });
     }
 
     return (
@@ -44,14 +37,14 @@ const ContactForm = ({
                 <div className="form-control">
                     <label htmlFor="full-name">NAME</label>
                     <input type="text" className="full-name" id="full-name"
-                        placeholder={name.toUpperCase()}
+                        placeholder={contact.name.toUpperCase()}
                         onChange={nameHandler}
                         required />
                 </div>
                 <div className="form-control">
                     <label htmlFor="phone">TITLE</label>
                     <input type="text" className="title" id="title"
-                        placeholder={title.toUpperCase()}
+                        placeholder={contact.title.toUpperCase()}
                         onChange={titleHandler}
                         minLength={10} required />
                 </div>
@@ -60,7 +53,7 @@ const ContactForm = ({
                 <div className="form-control">
                     <label htmlFor="email">EMAIL</label>
                     <input type="email" className="email" id="email"
-                        placeholder={email}
+                        placeholder={contact.email}
                         onChange={emailHandler}
                         required />
                 </div>
@@ -68,7 +61,7 @@ const ContactForm = ({
                     <label htmlFor="phone">PHONE NUMBER</label>
                     <input type="tel" className="phone" id="phone"
                         pattern="^\d{3}-?\d{3}-?\d{4}|(\(\d{3}\)-?\d{3}-?\d{4})"
-                        placeholder={phone}
+                        placeholder={contact.phone}
                         onChange={phoneHandler}
                         minLength={10} required />
                 </div>
@@ -77,14 +70,14 @@ const ContactForm = ({
                 <div className="form-control">
                     <label htmlFor="link">LINK</label>
                     <input type="link" className="link" id="link"
-                        placeholder={link}
+                        placeholder={contact.link}
                         onChange={linkHandler}
                         required />
                 </div>
                 <div className="form-control">
                     <label htmlFor="address">ADDRESS</label>
                     <input type="address" className="address" id="address"
-                        placeholder={address}
+                        placeholder={contact.address}
                         onChange={addressHandler}
                         required />
                 </div>
@@ -92,7 +85,7 @@ const ContactForm = ({
             <div className="form-control special">
                 <label htmlFor="about">ABOUT ME</label>
                 <textarea name="about" id="about" cols="50" rows="5" maxLength={200}
-                    placeholder={about}
+                    placeholder={contact.about}
                     onChange={aboutHandler}
                 ></textarea>
             </div>
