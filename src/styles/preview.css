@@ -1,30 +1,35 @@
-.preview-wrapper{
+.preview-wrapper {
     box-shadow: 0px 5px 20px 1px;
     display: grid;
     grid-template-columns: 250px 550px;
     grid-template-rows: 250px 1fr;
 }
-.preview-side-content{
+
+.preview-side-content {
     background-color: var(--info-palate-color);
     display: flex;
     flex-direction: column;
     grid-area: 2/1/3/2;
     padding: 6px 0;
-    gap:12px;
+    gap: 12px;
     color: red;
     padding-left: 25px;
-    word-wrap:break-word;
+    word-wrap: break-word;
+    overflow: hidden;
 
 }
-.preview-side-content p{
-    color:black;
+
+.preview-side-content p {
+    color: black;
 }
-.profile-img{
+
+.profile-img {
     margin: auto;
 }
-.cover-img{
+
+.cover-img {
     display: inline-block;
-    width:170px;
+    width: 170px;
     height: 170px;
     border-radius: 50%;
     background-repeat: no-repeat;
@@ -33,74 +38,93 @@
     margin: auto;
     border: none;
 }
-.contact,.skills{
+
+.contact,
+.skills {
     margin-right: 7px;
 }
-.info-container{
+
+.info-container {
     display: flex;
     justify-content: flex-start;
-    gap:12px;
+    gap: 12px;
     /* width: 95%; */
 }
-.info{
+
+.info {
     gap: 12px;
     display: inline-block;
 }
-.info-container p{
+
+.info-container p {
     width: 90%;
 }
-.preview-side-content h1{
+
+.preview-side-content h1 {
     /* background-color: white; */
     width: 100%;
     /* text-align: center; */
     border-bottom: 2px solid red;
     margin-top: 20px;
 }
-.skills{
+
+.skills {
     margin-left: 12px;
 }
-.preview-side-content li{
+
+.preview-side-content li {
     margin-top: 5px;
     color: black;
 }
-.skill-container{
+
+.skill-container {
     display: flex;
 
 }
-.skill-list li{
+
+.skill-list li {
     width: 100%;
 }
-.icon-btn{
+
+.icon-btn {
     display: none;
     position: relative;
-    right:10px;
+    right: 10px;
 }
-.skill-list li:hover + .icon-btn{
+
+.skill-list li:hover+.icon-btn {
     display: block;
 }
-.about-me{
-    max-width:95% ;
+
+.about-me {
+    max-width: 95%;
 }
-.preview-main-content-header{
+
+.preview-main-content-header {
     text-align: center;
-    color:grey;
+    color: grey;
     grid-area: 1/2/2/3;
     margin: auto;
 }
-.preview-main-content-body{
+
+.preview-main-content-body {
     grid-area: 2/2/3/3;
     padding: 0 20px;
 }
-.preview-main-content-body h1{
+
+.preview-main-content-body h1 {
     color: var(--info-palate-color);
 }
-.preview-wrapper #img{
+
+.preview-wrapper #img {
     display: none;
 }
-.preview-main-content-header .author-name{
+
+.preview-main-content-header .author-name {
     font-size: 50px;
     color: red;
 }
-.preview-main-content-header .job-title{
+
+.preview-main-content-header .job-title {
     font-size: 25px;
 }

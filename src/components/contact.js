@@ -3,7 +3,7 @@ import { FaEnvelope } from 'react-icons/fa';
 import { FaLinkedinIn } from 'react-icons/fa';
 import { FaGlobeAmericas } from 'react-icons/fa';
 
-const Contact = ({ phone, email, link, address, contact }) => {
+const Contact = ({ contact }) => {
 
 
     return (
