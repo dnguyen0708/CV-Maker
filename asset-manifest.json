@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/CV-Maker/static/css/main.38a11624.css",
-    "main.js": "/CV-Maker/static/js/main.ed1467ce.js",
+    "main.css": "/CV-Maker/static/css/main.fcd61205.css",
+    "main.js": "/CV-Maker/static/js/main.819315ca.js",
     "static/media/blank-profile-pic.png": "/CV-Maker/static/media/blank-profile-pic.483261f6d382de76e360.png",
     "index.html": "/CV-Maker/index.html",
-    "main.38a11624.css.map": "/CV-Maker/static/css/main.38a11624.css.map",
-    "main.ed1467ce.js.map": "/CV-Maker/static/js/main.ed1467ce.js.map"
+    "main.fcd61205.css.map": "/CV-Maker/static/css/main.fcd61205.css.map",
+    "main.819315ca.js.map": "/CV-Maker/static/js/main.819315ca.js.map"
   },
   "entrypoints": [
-    "static/css/main.38a11624.css",
-    "static/js/main.ed1467ce.js"
+    "static/css/main.fcd61205.css",
+    "static/js/main.819315ca.js"
   ]
 }
