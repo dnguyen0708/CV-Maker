@@ -104,7 +104,7 @@
     text-align: center;
     color: grey;
     grid-area: 1/2/2/3;
-    margin: auto;
+    margin: 7% 5%;
 }
 
 .preview-main-content-body {
@@ -123,6 +123,7 @@
 .preview-main-content-header .author-name {
     font-size: 50px;
     color: red;
+    word-wrap: break-word;
 }
 
 .preview-main-content-header .job-title {

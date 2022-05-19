@@ -32,7 +32,7 @@ const Form = () => {
     }
     const addSkillHandler = () => {
         const newSkill = document.querySelector('#skill');
-        if (newSkill.value)
+        if (newSkill.value && skill.length < 12)
             setSkill([...skill, newSkill.value]);
         toggleSkill();
     }

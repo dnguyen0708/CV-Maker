@@ -49,11 +49,13 @@ const Workform = ({ work, setWork }) => {
                     <div className="form-control">
                         <label htmlFor="job-title">JOB TITLE</label>
                         <input type="text" className="job-title" id="job-title"
+                            maxLength={20}
                             required />
                     </div>
                     <div className="form-control">
                         <label htmlFor="job-address">ADDRESS</label>
                         <input type="text" className="job-address" id="job-address"
+                            maxLength={33}
                             required />
                     </div>
 
@@ -62,12 +64,14 @@ const Workform = ({ work, setWork }) => {
                     <div className="form-control">
                         <label htmlFor="job-company">COMPANY NAME</label>
                         <input type="text" className="job-company" id="job-company"
+                            maxLength={30}
                             required />
                     </div>
 
                     <div className="form-control">
                         <label htmlFor="job-from-to">EMPLOYED FROM - TO</label>
                         <input type="text" className="job-from-to" id="job-from-to"
+                            maxLength={20}
                             required />
                     </div>
                 </div>

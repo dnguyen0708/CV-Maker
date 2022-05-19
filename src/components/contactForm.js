@@ -37,6 +37,7 @@ const ContactForm = ({ contact, setContact }) => {
                 <div className="form-control">
                     <label htmlFor="full-name">NAME</label>
                     <input type="text" className="full-name" id="full-name"
+                        maxLength={20}
                         placeholder={contact.name.toUpperCase()}
                         onChange={nameHandler}
                         required />
@@ -44,6 +45,7 @@ const ContactForm = ({ contact, setContact }) => {
                 <div className="form-control">
                     <label htmlFor="phone">TITLE</label>
                     <input type="text" className="title" id="title"
+                        maxLength={20}
                         placeholder={contact.title.toUpperCase()}
                         onChange={titleHandler}
                         minLength={10} required />
@@ -53,6 +55,7 @@ const ContactForm = ({ contact, setContact }) => {
                 <div className="form-control">
                     <label htmlFor="email">EMAIL</label>
                     <input type="email" className="email" id="email"
+                        maxLength={22}
                         placeholder={contact.email}
                         onChange={emailHandler}
                         required />
@@ -63,7 +66,7 @@ const ContactForm = ({ contact, setContact }) => {
                         pattern="^\d{3}-?\d{3}-?\d{4}|(\(\d{3}\)-?\d{3}-?\d{4})"
                         placeholder={contact.phone}
                         onChange={phoneHandler}
-                        minLength={10} required />
+                        minLength={10} maxLength={15} required />
                 </div>
             </div>
             <div className="form-group">
@@ -71,6 +74,7 @@ const ContactForm = ({ contact, setContact }) => {
                     <label htmlFor="link">LINK</label>
                     <input type="link" className="link" id="link"
                         placeholder={contact.link}
+                        maxLength={30}
                         onChange={linkHandler}
                         required />
                 </div>
@@ -78,6 +82,7 @@ const ContactForm = ({ contact, setContact }) => {
                     <label htmlFor="address">ADDRESS</label>
                     <input type="address" className="address" id="address"
                         placeholder={contact.address}
+                        maxLength={40}
                         onChange={addressHandler}
                         required />
                 </div>

@@ -42,16 +42,19 @@ const EducationForm = ({ education, setEducation }) => {
                 <div className="form-control">
                     <label htmlFor="education-degree">DEGREE</label>
                     <input type="text" className="education-degree" id="education-degree"
+                        maxLength={30}
                         required />
                 </div>
                 <div className="form-control">
                     <label htmlFor="education-school-name">SCHOOL NAME</label>
                     <input type="text" className="education-school-name" id="education-school-name"
+                        maxLength={30}
                         required />
                 </div>
                 <div className="form-control">
                     <label htmlFor="education-from-to">FROM - TO</label>
                     <input type="text" className="education-from-to" id="education-from-to"
+                        maxLength={15}
                         required />
                 </div>
                 <div className="education-btn">
